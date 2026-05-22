@@ -1,43 +1,339 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arthur Meira</title>
-    <link rel="stylesheet" href="/css/style.css">
-</head>
-<body>
-    <header>
-        <section>
-            <ul>
-                <li><a style="color: rgb(15, 156, 109);" href="index.html">Home</a></li>
-                <li><a href="xp.html">Experiência</a></li>
-                <li><a href="https://wa.me/5548999414621?text=Ol%C3%A1">Contato</a></li>
-            </ul>
-        </section>
-    </header>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfólio profissional de Arthur Meira, desenvolvedor web freelancer focado em sites modernos, landing pages e interfaces digitais."
+    />
+    <title>Arthur Meira | Desenvolvedor Web Freelancer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700;800&family=Space+Grotesk:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header" data-reveal>
+        <a class="brand" href="#inicio" aria-label="Ir para o início">
+          <span class="brand-name">
+            <span>Meira</span><span>Dev</span>
+          </span>
+        </a>
 
-    <main>
-        <section>
-            <img src="/img/me.jpg" alt="img">
-            
-            <article>
-                <h3 style="color: rgb(15, 156, 109);">Sobre mim</h3>
-                <p>Olá, me chamo Arthur Meira, tenho 19 anos e estou cursando Ciência da Computação na UNESC.
-                   Atualmente sou estágiario na empresa Betha Sistemas, onde faço parte do time de TI.
-                   Gosto muito das áreas de desenvolvimento, redes e segurança da informação.
+        <button class="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">
+          <i data-lucide="menu"></i>
+        </button>
+
+        <nav class="site-nav" aria-label="Navegação principal">
+          <a href="#sobre">Sobre</a>
+          <a href="#projetos">Projetos</a>
+          <a href="#servicos">Serviços</a>
+          <a href="#contato">Contato</a>
+        </nav>
+      </header>
+
+      <main>
+        <section class="hero section" id="inicio">
+          <div class="hero-content" data-reveal>
+            <p class="eyebrow">Desenvolvedor web freelancer</p>
+            <h1>Arthur Meira</h1>
+            <p class="hero-headline">
+              Sites profissionais para apresentar seu negócio e gerar oportunidades.
+            </p>
+            <p class="hero-subtitle">
+              Desenvolvo landing pages, sites institucionais e interfaces web com visual moderno, boa performance e
+              foco em conversão, da criação à publicação online.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#contato">
+                <span>Conversar sobre projeto</span>
+                <i data-lucide="arrow-right"></i>
+              </a>
+              <a class="btn btn-secondary" href="#projetos">
+                <i data-lucide="layout-template"></i>
+                <span>Ver projetos</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="hero-visual" aria-hidden="true" data-reveal>
+            <div class="browser-mockup">
+              <div class="mockup-topbar">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <div class="mockup-canvas">
+                <div class="mockup-sidebar"></div>
+                <div class="mockup-main">
+                  <div class="mockup-pill"></div>
+                  <div class="mockup-title"></div>
+                  <div class="mockup-row">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                  </div>
+                  <div class="mockup-panel"></div>
+                </div>
+              </div>
+            </div>
+            <div class="floating-stat stat-one">
+              <span>Interface</span>
+              <strong>Limpa</strong>
+            </div>
+            <div class="floating-stat stat-two">
+              <span>Entrega</span>
+              <strong>Completa</strong>
+            </div>
+          </div>
+        </section>
+
+        <section class="section about" id="sobre">
+          <div class="section-heading" data-reveal>
+            <p class="eyebrow">Sobre mim</p>
+            <h2>Desenvolvimento web com visual profissional e foco em resultado.</h2>
+          </div>
+          <div class="about-grid">
+            <article class="about-copy" data-reveal>
+              <div class="about-copy-inner">
+                <p>
+                  Sou desenvolvedor web freelancer e crio sites sob medida para empresas, autônomos e projetos
+                  digitais.
                 </p>
+                <p>
+                  Meu foco é entregar páginas bonitas, rápidas, responsivas e bem estruturadas para apresentar melhor
+                  o seu negócio e gerar mais contatos.
+                </p>
+              </div>
+              <div class="about-tags" aria-label="Especialidades">
+                <span>Sites</span>
+                <span>Landing pages</span>
+                <span>Interfaces web</span>
+              </div>
             </article>
+            <div class="about-metrics" data-reveal>
+              <div class="metric-card">
+                <span>01</span>
+                <div>
+                  <strong>Visual profissional</strong>
+                  <p>Layout moderno, limpo e alinhado com a percepção do seu negócio.</p>
+                </div>
+              </div>
+              <div class="metric-card">
+                <span>02</span>
+                <div>
+                  <strong>Código responsivo</strong>
+                  <p>Páginas rápidas, organizadas e funcionais em desktop e celular.</p>
+                </div>
+              </div>
+              <div class="metric-card">
+                <span>03</span>
+                <div>
+                  <strong>Publicação online</strong>
+                  <p>Configuração de domínio, hospedagem e servidor para deixar tudo no ar.</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
-    </main>
 
-    <footer>
-       <section>
-                <a href="https://github.com/arthurmeira"><img src="/img/github.png" alt="github"></a>
-                <a href="https://www.linkedin.com/in/arthur-meira-191737215/"><img src="/img/linkedin.png" alt="github"></a>
-                <a href="https://wa.me/5548999414621?text=Ol%C3%A1"><img src="/img/whatsapp (3).png" alt="github"></a>
-                <a href="mailto:arthurmeiraprog@gmail.com"><img src="/img/o-email.png" alt="github"></a>
-       </section>
-    </footer>
-</body>
+        <section class="section projects" id="projetos">
+          <div class="section-heading" data-reveal>
+            <p class="eyebrow">Projetos</p>
+            <h2>Projetos desenvolvidos</h2>
+          </div>
+
+          <div class="project-grid">
+            <article class="project-card" data-reveal>
+              <div class="project-preview project-photo">
+                <img src="assets/metalurgica-feltrin.jpg" alt="Soldagem industrial no projeto Metalúrgica Feltrin" />
+              </div>
+              <div class="project-body">
+                <span class="project-tag">Site institucional</span>
+                <h3>Metalúrgica Feltrin</h3>
+                <p>Site industrial com apresentação técnica, catálogo e contato para orçamento.</p>
+                <div class="project-actions">
+                  <a href="https://www.metalurgicafeltrin.com.br/" target="_blank" rel="noreferrer" aria-label="Visualizar projeto Metalúrgica Feltrin">
+                    <i data-lucide="external-link"></i>
+                    Visualizar
+                  </a>
+                  <a href="https://www.metalurgicafeltrin.com.br/#servicos" target="_blank" rel="noreferrer" aria-label="Ver detalhes do projeto Metalúrgica Feltrin">Detalhes</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card" data-reveal>
+              <div class="project-preview preview-green">
+                <div class="preview-window">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+                <div class="preview-layout">
+                  <div class="preview-hero"></div>
+                  <div class="preview-lines">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                </div>
+              </div>
+              <div class="project-body">
+                <span class="project-tag">Landing page</span>
+                <h3>Nexa Studio</h3>
+                <p>Página moderna para apresentar serviços e incentivar contato.</p>
+                <div class="project-actions">
+                  <a href="#" aria-label="Visualizar projeto Nexa Studio">
+                    <i data-lucide="external-link"></i>
+                    Visualizar
+                  </a>
+                  <a href="#" aria-label="Ver detalhes do projeto Nexa Studio">Detalhes</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card featured" data-reveal>
+              <div class="project-preview preview-purple">
+                <div class="dashboard-bars">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+                <div class="dashboard-card"></div>
+                <div class="dashboard-line"></div>
+              </div>
+              <div class="project-body">
+                <span class="project-tag">Interface web</span>
+                <h3>Pulse CRM</h3>
+                <p>Interface limpa para gestão comercial e visualização de dados.</p>
+                <div class="project-actions">
+                  <a href="#" aria-label="Visualizar projeto Pulse CRM">
+                    <i data-lucide="external-link"></i>
+                    Visualizar
+                  </a>
+                  <a href="#" aria-label="Ver detalhes do projeto Pulse CRM">Detalhes</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="section services" id="servicos">
+          <div class="section-heading" data-reveal>
+            <p class="eyebrow">Serviços</p>
+            <h2>O que eu desenvolvo</h2>
+          </div>
+
+          <div class="service-grid">
+            <article class="service-card" data-reveal>
+              <i data-lucide="building-2"></i>
+              <h3>Sites institucionais</h3>
+              <p>Sites profissionais para apresentar empresas, serviços e diferenciais.</p>
+            </article>
+            <article class="service-card" data-reveal>
+              <i data-lucide="rocket"></i>
+              <h3>Landing pages</h3>
+              <p>Páginas focadas em campanhas, anúncios, contatos e conversão.</p>
+            </article>
+            <article class="service-card" data-reveal>
+              <i data-lucide="shopping-bag"></i>
+              <h3>Páginas comerciais</h3>
+              <p>Páginas para organizar ofertas, produtos e serviços com clareza.</p>
+            </article>
+            <article class="service-card" data-reveal>
+              <i data-lucide="layout-dashboard"></i>
+              <h3>Interfaces web</h3>
+              <p>Telas organizadas para sistemas, painéis e produtos digitais.</p>
+            </article>
+            <article class="service-card" data-reveal>
+              <i data-lucide="wand-sparkles"></i>
+              <h3>Redesign de sites</h3>
+              <p>Atualização visual para sites antigos, confusos ou desorganizados.</p>
+            </article>
+            <article class="service-card" data-reveal>
+              <i data-lucide="pen-tool"></i>
+              <h3>Protótipos visuais</h3>
+              <p>Layouts para validar ideias antes de investir no desenvolvimento completo.</p>
+            </article>
+            <article class="service-card" data-reveal>
+              <i data-lucide="globe-2"></i>
+              <h3>Publicação na internet</h3>
+              <p>Registro de domínio, hospedagem configurada e site publicado online.</p>
+            </article>
+            <article class="service-card" data-reveal>
+              <i data-lucide="server-cog"></i>
+              <h3>Configuração web</h3>
+              <p>Ajustes de servidor, apontamentos, SSL e páginas já existentes.</p>
+            </article>
+            <article class="service-card" data-reveal>
+              <i data-lucide="wrench"></i>
+              <h3>Manutenção de páginas</h3>
+              <p>Correções, melhorias, atualizações e suporte para sites em uso.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section contact" id="contato">
+          <div class="contact-panel" data-reveal>
+            <div class="contact-copy">
+              <p class="eyebrow">Contato</p>
+              <h2>Vamos tirar seu site do papel?</h2>
+              <p>
+                Me chama no WhatsApp e conta o que você precisa desenvolver. Eu te respondo com um caminho claro
+                para criar, publicar ou manter uma página profissional, bonita e voltada a gerar contatos.
+              </p>
+              <div class="contact-actions">
+                <a class="btn btn-primary btn-whatsapp" href="https://wa.me/554899414764" target="_blank" rel="noreferrer">
+                  <i data-lucide="message-circle"></i>
+                  <span>Conversar no WhatsApp</span>
+                </a>
+                <a class="btn btn-secondary" href="mailto:arthurmeiraprog@gmail.com">
+                  <i data-lucide="mail"></i>
+                  <span>E-mail</span>
+                </a>
+              </div>
+            </div>
+
+            <form class="contact-form" id="contactForm">
+              <label>
+                Nome
+                <input type="text" name="name" placeholder="Seu nome" required />
+              </label>
+              <label>
+                E-mail
+                <input type="email" name="email" placeholder="seu@email.com" required />
+              </label>
+              <label>
+                Projeto
+                <textarea name="message" rows="5" placeholder="Conte sobre seu projeto, serviço ou objetivo" required></textarea>
+              </label>
+              <button class="btn btn-primary" type="submit">
+                <span>Enviar briefing</span>
+                <i data-lucide="arrow-up-right"></i>
+              </button>
+              <p class="form-status" role="status" aria-live="polite"></p>
+            </form>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <span>© 2026 MeiraDev. Todos os direitos reservados.</span>
+        <a href="#inicio">Voltar ao topo</a>
+      </footer>
+
+      <a class="whatsapp-float" href="https://wa.me/554899414764" target="_blank" rel="noreferrer" aria-label="Conversar no WhatsApp">
+        <i data-lucide="message-circle"></i>
+      </a>
+    </div>
+
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <script src="script.js"></script>
+  </body>
 </html>
