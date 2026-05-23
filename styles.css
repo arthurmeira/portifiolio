@@ -620,6 +620,13 @@ h3 {
   filter: saturate(0.95) contrast(1.05);
 }
 
+.project-photo > a {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: block;
+}
+
 .project-header-shot img {
   object-position: top center;
 }
@@ -943,7 +950,7 @@ h3 {
 
 .guide-card {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   display: flex;
   align-items: flex-start;
   gap: 16px;
@@ -951,6 +958,10 @@ h3 {
   border: 1px solid var(--line);
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.045);
+}
+
+.guide-card div {
+  min-width: 0;
 }
 
 .guide-card-featured {
@@ -1149,8 +1160,8 @@ h3 {
   }
 
   .contact {
-    padding-top: 82px;
-    padding-bottom: 72px;
+    padding-top: 76px;
+    padding-bottom: 58px;
   }
 
   .hero {
@@ -1222,18 +1233,18 @@ h3 {
 
   .about-copy,
   .contact-panel {
-    padding: 26px;
+    padding: 22px;
   }
 
   .contact-panel {
-    gap: 34px;
+    gap: 28px;
   }
 
   .contact-copy h2 {
     max-width: 100%;
-    margin-bottom: 18px;
-    font-size: clamp(2.25rem, 10vw, 3.1rem);
-    line-height: 1.05;
+    margin-bottom: 16px;
+    font-size: clamp(2rem, 9vw, 2.75rem);
+    line-height: 1.06;
   }
 
   .contact-copy p {
@@ -1243,12 +1254,46 @@ h3 {
   }
 
   .contact-actions {
-    margin-top: 30px;
+    margin-top: 26px;
   }
 
   .contact-guide {
     width: 100%;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .contact-guide::before {
+    width: 84px;
+    height: 84px;
+    filter: blur(24px);
+  }
+
+  .guide-card {
+    gap: 12px;
     padding: 14px;
+  }
+
+  .guide-icon {
+    flex-basis: 36px;
+    width: 36px;
+    height: 36px;
+  }
+
+  .guide-icon svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .guide-card strong {
+    margin-bottom: 4px;
+    font-size: 0.95rem;
+    line-height: 1.25;
+  }
+
+  .guide-card p {
+    font-size: 0.9rem;
+    line-height: 1.48;
   }
 
   .project-grid,
@@ -1265,11 +1310,38 @@ h3 {
     gap: 12px;
     width: min(calc(100% - 24px), var(--max-width));
   }
+
+  .whatsapp-float {
+    display: none;
+  }
 }
 
 @media (max-width: 420px) {
   .brand-name {
     font-size: 0.98rem;
+  }
+
+  .contact-panel {
+    padding: 18px;
+  }
+
+  .contact-guide {
+    padding: 0;
+    border: 0;
+    background: transparent;
+  }
+
+  .contact-guide::before {
+    display: none;
+  }
+
+  .guide-card {
+    align-items: center;
+    padding: 13px;
+  }
+
+  .guide-card p {
+    display: none;
   }
 
   .metric-card {
