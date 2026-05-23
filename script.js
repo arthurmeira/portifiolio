@@ -2,8 +2,6 @@ const header = document.querySelector(".site-header");
 const navToggle = document.querySelector(".nav-toggle");
 const navLinks = document.querySelectorAll(".site-nav a");
 const revealItems = document.querySelectorAll("[data-reveal]");
-const contactForm = document.querySelector("#contactForm");
-const formStatus = document.querySelector(".form-status");
 
 if (window.lucide) {
   window.lucide.createIcons();
@@ -39,19 +37,6 @@ const revealObserver = new IntersectionObserver(
 );
 
 revealItems.forEach((item) => revealObserver.observe(item));
-
-contactForm?.addEventListener("submit", (event) => {
-  event.preventDefault();
-
-  const formData = new FormData(contactForm);
-  const name = formData.get("name")?.toString().trim();
-
-  formStatus.textContent = name
-    ? `${name}, recebi seu briefing. Vou te responder com os próximos passos.`
-    : "Recebi seu briefing. Vou te responder com os próximos passos.";
-
-  contactForm.reset();
-});
 
 window.addEventListener("keydown", (event) => {
   if (event.key === "Escape" && header.classList.contains("nav-open")) {

@@ -110,7 +110,13 @@ button {
 
 .brand {
   gap: 0;
+  flex: 0 0 auto;
+  min-width: max-content;
+  padding: 10px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
   color: var(--text);
+  background: rgba(255, 255, 255, 0.035);
   font-weight: 800;
 }
 
@@ -123,6 +129,8 @@ button {
   font-size: 1.12rem;
   font-weight: 800;
   letter-spacing: 0;
+  line-height: 1;
+  white-space: nowrap;
 }
 
 .brand-name span:last-child {
@@ -612,6 +620,10 @@ h3 {
   filter: saturate(0.95) contrast(1.05);
 }
 
+.project-header-shot img {
+  object-position: top center;
+}
+
 .project-photo::after {
   position: absolute;
   inset: 0;
@@ -904,63 +916,78 @@ h3 {
   background: rgba(255, 255, 255, 0.045);
 }
 
-.contact-form {
+.contact-guide {
+  position: relative;
   display: grid;
-  gap: 20px;
-  align-self: start;
-  padding-top: 2px;
+  gap: 14px;
+  align-self: stretch;
+  padding: 18px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background:
+    linear-gradient(145deg, rgba(53, 240, 164, 0.09), transparent 46%),
+    rgba(7, 10, 17, 0.42);
 }
 
-.contact-form label {
-  display: grid;
-  gap: 10px;
-  color: var(--muted-strong);
-  font-size: 0.86rem;
-  font-weight: 800;
+.contact-guide::before {
+  position: absolute;
+  inset: 18px 18px auto auto;
+  width: 112px;
+  height: 112px;
+  content: "";
+  border-radius: 999px;
+  background: rgba(155, 104, 255, 0.22);
+  filter: blur(28px);
 }
 
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
+.guide-card {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 18px;
   border: 1px solid var(--line);
   border-radius: 8px;
-  outline: 0;
-  color: var(--text);
-  background: rgba(4, 6, 11, 0.54);
-  transition: border-color 180ms ease, box-shadow 180ms ease, background 180ms ease;
+  background: rgba(255, 255, 255, 0.045);
 }
 
-.contact-form input {
-  height: 58px;
-  padding: 0 16px;
+.guide-card-featured {
+  border-color: rgba(53, 240, 164, 0.26);
+  background:
+    linear-gradient(135deg, rgba(53, 240, 164, 0.14), rgba(155, 104, 255, 0.1)),
+    rgba(255, 255, 255, 0.05);
 }
 
-.contact-form textarea {
-  resize: vertical;
-  min-height: 170px;
-  padding: 16px;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-  border-color: rgba(53, 240, 164, 0.46);
-  background: rgba(4, 6, 11, 0.72);
-  box-shadow: 0 0 0 4px rgba(53, 240, 164, 0.08);
-}
-
-.contact-form button {
-  width: 100%;
-  min-height: 56px;
-  margin-top: 2px;
-  cursor: pointer;
-}
-
-.form-status {
-  min-height: 22px;
-  margin: 0;
+.guide-icon {
+  flex: 0 0 42px;
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border-radius: 8px;
   color: var(--green);
-  font-size: 0.88rem;
+  background: rgba(53, 240, 164, 0.1);
+}
+
+.guide-icon svg {
+  width: 20px;
+  height: 20px;
+  stroke-width: 2.2;
+}
+
+.guide-card strong {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 1rem;
   font-weight: 700;
+}
+
+.guide-card p {
+  margin-bottom: 0;
+  color: var(--muted);
+  line-height: 1.6;
 }
 
 .site-footer {
@@ -1068,9 +1095,22 @@ h3 {
   .site-header {
     top: 10px;
     width: min(calc(100% - 20px), var(--max-width));
+    min-height: 64px;
+    gap: 12px;
+    padding: 0 10px 0 12px;
+  }
+
+  .brand {
+    max-width: calc(100% - 58px);
+    padding: 9px 10px;
+  }
+
+  .brand-name {
+    font-size: clamp(1rem, 4.4vw, 1.1rem);
   }
 
   .nav-toggle {
+    flex: 0 0 42px;
     display: grid;
   }
 
@@ -1206,17 +1246,9 @@ h3 {
     margin-top: 30px;
   }
 
-  .contact-form {
+  .contact-guide {
     width: 100%;
-    gap: 17px;
-  }
-
-  .contact-form input {
-    height: 54px;
-  }
-
-  .contact-form textarea {
-    min-height: 150px;
+    padding: 14px;
   }
 
   .project-grid,
@@ -1235,13 +1267,11 @@ h3 {
   }
 }
 
-@media (max-width: 360px) {
-  .brand span:last-child {
-    display: none;
-  }
-}
-
 @media (max-width: 420px) {
+  .brand-name {
+    font-size: 0.98rem;
+  }
+
   .metric-card {
     grid-template-columns: 1fr;
   }
